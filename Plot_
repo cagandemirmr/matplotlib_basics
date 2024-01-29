@@ -1,0 +1,202 @@
+import matplotlib.pyplot as plt
+import numpy as np
+
+x=np.array([0,10])
+// x Kordinatı belirtilir. Numpy de
+y= np.array([0,140])
+// y kordinatı belrtilir.Numpy de
+plt.plot(x,y)
+// X ve Y tablosu çizilir.
+plt.show()
+// Tablo yazırılır.
+---------------------------
+import matplotlib.pyplot as plt
+import numpy as np
+
+y= np.array([20,5,13,2,20])
+// Eğer X değerini belirtmezsek program X değerini sıfırdan başlatır.
+plt.plot(y,marker='x')
+//Kırılım noktalarının belirlenmesi için marker değişkeni belirlenir. Bu değeri ise istediğimiz gibi belirleyebiliriz.
+plt.show()
+----------------------------
+ 
+import matplotlib.pyplot as plt
+import numpy as np
+
+y= np.array([20,5,13,2,20])
+plt.plot(y,'*--r',ms=10)
+//”ms” burada marker size ın kısaltmasıdır.
+// “—“ işareti tablonun çizgilerinin kesikli çüzgi olarak belirtilmesine neden olur.
+//”r” çizginin rengini red(kırmızı) olarak belirlememize neden olur.
+plt.show()
+----------------------------
+import matplotlib.pyplot as plt
+import numpy as np
+
+y= np.array([20,5,13,2,20])
+plt.plot(y,'*:g',ms=10)
+// “:” işareti nokta nokta çizgilerin çizilmesine neden olur.
+plt.show()
+-----------------------------
+import matplotlib.pyplot as plt
+import numpy as np
+
+y= np.array([20,5,13,2,20])
+plt.plot(y,'*-.g',ms=10)
+//-. Nokta çizginin oluşmasını sağlar.
+plt.show()
+-------------------------------
+import matplotlib.pyplot as plt
+import numpy as np
+
+y= np.array([20,5,13,2,20])
+plt.plot(y,'o-r',ms=5,mec='g',mfc='g')
+//mec(marker edge(kenar) color), mfc(marker fill color) değerini ifade eder.
+plt.show()
+------------------------------
+import matplotlib.pyplot as plt
+import numpy as np
+
+y= np.array([20,5,13,2,20])
+plt.plot(y,'o-r',ms=5,mec='#37E7FF',mfc='#37E7FF')
+// Seçtiğimiz rengin hex kodunu seçip bu yere kopyalarsak o zaman rengi istediğimiz şekilde belirlemiş oluruz.
+plt.show()
+--------------------------------
+import matplotlib.pyplot as plt
+import numpy as np
+x=np.array([0,1,2,3,4])
+y= np.array([20,5,13,2,20])
+x2=np.array([0,1,2,3,4])
+y2=np.array([15,7,10,20,2])
+//Plot a sadece X2 ve Y2 i eklememiz yeterlidir.
+plt.plot (x,y,x2,y2)
+plt.show()
+---------------------------------
+import matplotlib.pyplot as plt
+import numpy as np
+from numpy import random
+
+x=[]
+y=[]
+
+for a in range(20):
+  y.append(random.randint(50))
+  x.append(a)
+
+x1=np.array(x)
+y1=np.array(y)
+// random çalıştırmak için numpy den random fonksiyonu çekilir.
+plt.title('Grafik Basligi')
+plt.xlabel('X degerleri')
+plt.ylabel('Y degerleri')
+//başlık yazmak için .title,x axis ine başlık yazmak için Xlabel,y axis ine yaı yamak için ylabel yazarız.
+plt.plot (x1,y1)
+plt.show()
+----------------------------------
+import matplotlib.pyplot as plt
+import numpy as np
+
+x=np.array([0,1,2,3,4,5])
+y=np.array([5,16,30,21,0,6])
+plt.subplot(1,2,1)
+plt.plot (x,y)
+#subplot olarak içeriye alınan değerde birinci değer satırı ikinci değer sütunu 3.değerde ilk grafiğin nerede konumlanacağını belirtir.
+x=np.array([0,1,2,3,4,5])
+y=np.array([4,13,19,7,5,8])
+plt.subplot(1,2,2)
+plt.plot (x,y)
+
+
+---------------------------------
+import matplotlib.pyplot as plt
+import numpy as np
+
+x=np.array([0,1,2,3,4,5])
+y=np.array([5,16,30,21,0,6])
+plt.subplot(1,2,1)
+plt.plot (x,y)
+#subplot olarak içeriye alınan değerde birinci değer satırı ikinci değer sütunu 3.değerde ilk grafiğin nerede konumlanacağını belirtir.
+x=np.array([0,1,2,3,4,5])
+y=np.array([4,13,19,7,5,8])
+plt.subplot(1,2,2)
+plt.plot (x,y)
+----------------------------------
+import matplotlib.pyplot as plt
+import numpy as np
+
+x=np.array([0,1,2,3,4,5])
+y=np.array([5,16,30,21,0,6])
+plt.subplot(2,1,1)
+plt.plot (x,y)
+#subplot olarak içeriye alınan değerde birinci değer satırı ikinci değer sütunu 3.değerde ilk grafiğin nerede konumlanacağını belirtir.
+x=np.array([0,1,2,3,4,5])
+y=np.array([4,13,19,7,5,8])
+plt.subplot(2,1,2)
+plt.plot (x,y)
+
+plt.show()
+--------------------------------------
+
+import matplotlib.pyplot as plt
+import numpy as np
+x=np.array([1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,173])
+y=np.array([50, 20, 60, 58, 90, 40, 20, 85, 70, 150, 11, 125, 170, 90, 10, 25,18])
+
+plt.scatter(x,y)
+x=np.array([1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17])
+y=np.array([40,10,6,8,9, 30, 10, 85, 70, 50, 10, 25, 85, 70, 50, 10, 100])
+
+plt.scatter(x,y)
+#Diğer yaptığımız örneklerden farklı olarak burada plot kullanılmaz.
+plt.show()
+-------------------------------------------
+import matplotlib.pyplot as plt
+import numpy as np
+x = np.array([1,7,5,3,2])
+y = np.array([50,120,10,20,80])
+boyut= np.array([150,10,100,80,5])
+plt.scatter(x, y,s=boyut)
+plt.show()
+--------------------------------------------
+import matplotlib.pyplot as plt
+import numpy as np
+x = np.array([1,7,5,3,2])
+y = np.array([50,120,10,20,80])
+boyut= np.array([y[0],y[1],y[2],y[3],y[4]])
+#Y nin değerine göre büyüme ya da küçülme olur.
+plt.scatter(x, y,s=boyut)
+plt.show()
+-------------------------------------------
+import matplotlib.pyplot as plt
+import numpy as np
+x = np.array([1,7,5,3,2])
+y = np.array([50,120,10,20,80])
+boyut= y
+plt.scatter(x, y,s=boyut)
+plt.show()
+--------------------------------------------
+import matplotlib.pyplot as plt
+import numpy as np
+ort1=int(input("1.Ortalama"))
+ort2=int(input("2.Ortalama"))
+ort3=int(input("3.Ortalama"))
+ort4=int(input("4.Ortalama"))
+
+x=np.array(["1.Ortalama","2.Ortalama","3.Ortalama","4.Ortalama"])
+y=np.array([ort1,ort2,ort3,ort4])
+
+plt.bar(x,y)
+plt.show()
+--------------------------------------------
+import matplotlib.pyplot as plt
+import numpy as np
+
+etiket=np.array(["1.Dilim","2.Dilim","3.Dilim","4.Dilim"])
+yuzdelikdilimler=np.array([30,15,15,40])
+#Yuzdelikdilimlerin toplamı 100 ü geçemez
+
+enbuyuk=([0,0,0,0.3])
+
+plt.pie(yuzdelikdilimler,labels=etiket,explode=enbuyuk)
+plt.show()
+-----------------------------------------------
